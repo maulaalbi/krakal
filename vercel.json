@@ -12,7 +12,7 @@
       "dest": "public/index.php"
     }
   ],
-  "outputDirectory": "public",
+  "outputDirectory": "dist",
   "installCommand": "npm install",
   "buildCommand": "npm run build"
 }
