@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/**/*",
+      "src": "public/build/**/*",
       "use": "@vercel/static"
     },
     {
@@ -10,7 +10,7 @@
       "use": "@vercel/php"
     }
   ],
-  "outputDirectory": "dist",
+  "outputDirectory": "public/build",
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "routes": [

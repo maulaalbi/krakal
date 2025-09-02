@@ -6,15 +6,13 @@ export default defineConfig({
   plugins: [
     laravel({
       input: ['resources/css/app.css', 'resources/js/app.js'],
-      refresh: true,
-      buildDirectory: 'dist', // Pastikan output ke 'dist'
-      publicDirectory: 'public' // Tetap gunakan 'public' untuk aset publik Laravel
+      refresh: true
+      // Hapus buildDirectory: 'dist' untuk menggunakan default 'public/build'
     }),
     tailwindcss(),
   ],
   build: {
-    outDir: 'dist', // Selaras dengan buildDirectory
-    emptyOutDir: true, // Hapus konten lama di 'dist' sebelum build baru
-    manifest: true // Pastikan manifest dihasilkan untuk kompatibilitas Laravel
+    // Hapus outDir: 'dist' untuk menggunakan default 'public/build'
+    manifest: true // Pastikan manifest dihasilkan untuk Laravel
   }
 });
