@@ -4,16 +4,15 @@
     {
       "src": "public/build/**/*",
       "use": "@vercel/static"
-
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "public/index.php"
     }
   ],
   "outputDirectory": "public/build",
   "installCommand": "npm install",
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/build/index.html"
+    }
+  ]
 }
