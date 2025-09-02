@@ -4,6 +4,10 @@
     {
       "src": "dist/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "public/index.php",
+      "use": "@vercel/php"
     }
   ],
   "outputDirectory": "dist",
@@ -12,7 +16,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/index.html"
+      "dest": "/public/index.php"
     }
   ]
 }
